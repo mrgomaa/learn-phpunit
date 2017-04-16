@@ -1,0 +1,33 @@
+<phpunit colors="true" strict="true"
+    bootstrap="tests/autoload.php"
+    convertErrorsToExceptions="true" convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true" processIsolation="false"
+    stopOnFailure="false">
+    <!--
+    <php>
+      <const name="PHPUNIT_DEBUG" value="false" />
+      <ini name="display_errors" value="On" />
+      <ini name="error_reporting" value="32767" />
+    </php>
+    -->
+    <testsuites>
+      <testsuite name="Application Test Suite">
+          <directory suffix=".php">./tests/unit</directory>
+      </testsuite>
+    </testsuites>
+    <filter>
+      <whitelist>
+        <directory>./src</directory>
+        <exclude>
+          <directory>./vendor</directory>
+          <directory>./tests</directory>
+        </exclude>
+      </whitelist>
+    </filter>
+    <logging>
+      <log type="coverage-html" target="./tests/reports/Coverage/"
+        charset="UTF-8" yui="true" highlight="true" />
+      <log type="junit" target="./tests/reports/Results/Results.xml"
+        logIncompleteSkipped="true" />
+    </logging>
+</phpunit>

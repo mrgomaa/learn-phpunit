@@ -20,6 +20,7 @@
     },
     "scripts": {
       "cs": "./vendor/bin/phpcs --standard=PSR2 -n src/",
+      "cbf": "php -d \"disable_functions=\" ./vendor/bin/phpcbf --standard=PSR2 -n src/",
       "unit": "vendor/bin/phpunit --bootstrap src/PHPUnitTutorial/User.php tests/unit/PHPUnitTutorial/UserTest --coverage-text --testdox",
       "test": ["@cs", "", "echo OK", "", "@unit", "",  "echo End"]
     }

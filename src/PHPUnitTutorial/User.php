@@ -1,19 +1,23 @@
 <?php
 namespace PHPUnitTutorial;
 
-class User {
+class User
+{
     private $name;
 
-    public function getName() {
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function setName($name) {
+    public function setName($name)
+    {
         $this->name = $name;
     }
 
-    public function talk() {
-        //-return "Hello World!"; // Test Fails 
+    public function talk()
+    {
+        //-return "Hello World!"; // Test Fails
         return "Hello world!";
     }
 }
